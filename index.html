@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Мастер на Час — ВЫЗОВ за 45 минут | 0₽ за выезд • Гарантия 1 год • Москва и МО</title>
+<meta name="description" content="Мастер на час в Москве и МО от 630₽. Приедем за 45 минут. Электрик, сантехник, сборка мебели, муж на час. Фиксированная цена, гарантия 1 год. Калькулятор онлайн. ☎ +7 (495) 123-45-67">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  /* VK стиль — фирменные цвета ВКонтакте */
+  --orange:#0077FF;
+  --orange2:#2688EB;
+  --orange-dark:#005CF1;
+  --yellow:#0077FF;
+  --yellow2:#2688EB;
+  --yellow-dark:#005CF1;
+  --vk-blue:#0077FF;
+  --vk-blue2:#2688EB;
+  --vk-blue-dark:#005CF1;
+  --vk-blue-light:#E1E8ED;
+  --dark:#19191A;
+  --dark2:#2C2D2E;
+  --gray:#818C99;
+  --gray2:#99A2AD;
+  --light:#F9FAFB;
+  --line:#DCE1E6;
+  --vk-bg:#EDEEF0;
+  --green:#4BB34B;
+  --radius:16px;
+  --radius-sm:12px;
+  --shadow:0 1px 0 rgba(0,0,0,.05), 0 4px 16px rgba(0,0,0,.06);
+  --shadow-lg:0 4px 32px rgba(0,0,0,.08);
+}
+html{scroll-behavior:smooth}
+body{font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'VK Sans Display', 'Segoe UI', Roboto, Arial, sans-serif; color:#000; background:var(--vk-bg); line-height:1.5; overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{max-width:1240px;margin:0 auto;padding:0 20px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 20px;border-radius:10px;font-weight:600;font-size:14px;cursor:pointer;border:none;transition:.15s;white-space:nowrap;font-family:inherit}
+.btn-primary{background:var(--vk-blue);color:#fff;box-shadow:none;border:1.5px solid var(--vk-blue)}
+.btn-primary:hover{transform:none;box-shadow:none;background:var(--vk-blue-dark);border-color:var(--vk-blue-dark);color:#fff}
+.btn-dark{background:#19191A;color:#fff;border:1.5px solid #19191A}
+.btn-dark:hover{background:#000;border-color:#000}
+.btn-ghost{background:rgba(0,0,0,.04);border:1.5px solid transparent;color:var(--dark)}
+.btn-ghost:hover{border-color:transparent;background:rgba(0,0,0,.08);color:var(--dark)}
+.btn-lg{padding:18px 30px;font-size:16px;border-radius:14px}
+.badge{display:inline-flex;align-items:center;gap:8px;background:#0077FF0;color:var(--vk-blue);padding:6px 10px;border-radius:8px;font-weight:600;font-size:12px;letter-spacing:0;text-transform:uppercase;border:none;background:#E1E8ED}
+.badge-green{background:#E8F5E9;color:#1A7F37}
+/* TOPBAR */
+.topbar{background:#19191A;color:#E1E3E6;font-size:13px;padding:8px 0;border-bottom:none}
+.topbar-inner{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.topbar-links{display:flex;gap:16px;align-items:center}
+.topbar-links span{display:flex;align-items:center;gap:6px}
+/* HEADER */
+.header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid #DCE1E6;box-shadow:0 1px 0 rgba(0,0,0,.04)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-mark{width:42px;height:42px;background:var(--vk-blue);border-radius:11px;display:grid;place-items:center;color:#fff;font-weight:800;font-size:18px;letter-spacing:-.5px}
+.logo-mark span{color:#fff}
+.logo-text strong{display:block;font-size:18px;line-height:1;letter-spacing:-.02em}
+.logo-text small{color:var(--gray);font-size:12px;font-weight:600}
+.nav{display:flex;gap:22px;font-weight:600;font-size:14px;color:var(--dark2)}
+.nav a:hover{color:var(--vk-blue);background:transparent;padding:0;border-radius:0;margin:0}
+.header-actions{display:flex;gap:10px;align-items:center}
+.phone{display:flex;flex-direction:column;align-items:flex-end;line-height:1.1}
+.phone b{font-size:18px}
+.phone s{color:var(--gray);font-size:11px;text-decoration:none;font-weight:600}
+.burger{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:10px;background:#fff;place-items:center}
+/* HERO */
+.hero{position:relative;background:var(--vk-bg);overflow:hidden;padding:28px 0 36px}
+.hero::before{content:"";position:absolute;right:-10%;top:-10%;width:70%;height:80%;background:radial-gradient(ellipse at center, rgba(0,119,255,.07), transparent 70%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center}
+.h1{font-size:48px;line-height:.95;letter-spacing:-.04em;font-weight:900;margin:14px 0 16px}
+.h1 span{color:var(--vk-blue);position:relative;background:transparent;padding:0;border-radius:0}
+.h1 span::after{display:none}
+.hero-sub{color:var(--gray);font-size:17px;max-width:560px;margin-bottom:22px}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.hero-trust{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.trust-pill{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid #E7E8EC;padding:9px 12px;border-radius:100px;box-shadow:none}
+.trust-pill img{width:32px;height:32px;border-radius:50%;object-fit:cover}
+.stars{color:#F59E0B;letter-spacing:1px;font-size:13px}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0 0}
+.check{display:flex;gap:10px;align-items:center;font-weight:600;font-size:14px}
+.check i{width:22px;height:22px;background:#E8F5E9;color:#1A7F37;display:grid;place-items:center;border-radius:50%;font-style:normal;font-size:12px;flex:0 0 22px}
+/* Hero card */
+.hero-card{background:#fff;border:1px solid #E7E8EC;border-radius:12px;box-shadow:0 1px 0 rgba(0,0,0,.04), 0 4px 24px rgba(0,0,0,.06);overflow:hidden}
+.hero-card-head{background:#fff;color:#000;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #E7E8EC}
+.hero-card-head b{font-size:15px}
+.hero-card-head span{font-size:12px;background:#EDEEF0;color:#818C99;padding:6px 10px;border-radius:100px}
+.hero-form{padding:20px}
+.hero-form grid{display:grid;gap:12px}
+.inp{width:100%;padding:12px 12px;border:1px solid #D3D9DE;border-radius:8px;font-size:15px;outline:none;transition:.15s;background:#F5F5F5}
+.inp:focus{border-color:var(--vk-blue);box-shadow:none;background:#fff}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.hint{font-size:11px;color:var(--gray);text-align:center;margin-top:10px;line-height:1.4}
+.price-note{display:flex;justify-content:space-between;align-items:center;background:#EDEEF0;border:none;padding:12px 14px;border-radius:10px;margin-top:12px}
+.price-note strong{color:var(--vk-blue);background:transparent;padding:0;border-radius:0}
+.hero-image{position:relative;border-radius:12px;overflow:hidden;background:#19191A;aspect-ratio:4/3;display:grid;place-items:center;color:#fff;border:none}
+.hero-image img{width:100%;height:100%;object-fit:cover;opacity:.92}
+.hero-badge{position:absolute;left:14px;bottom:14px;background:#fff;color:var(--dark);padding:10px 14px;border-radius:14px;box-shadow:var(--shadow);display:flex;gap:12px;align-items:center}
+.hero-badge b{font-size:22px;line-height:1}
+.hero-badge small{font-size:11px;color:var(--gray);line-height:1.2}
+/* SERVICES */
+.section{padding:56px 0}
+.section-head{text-align:center;max-width:680px;margin:0 auto 28px}
+.section-head h2{font-size:36px;letter-spacing:-.03em;line-height:1}
+.section-head p{color:var(--gray);margin-top:10px}
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.svc{background:#fff;border:1px solid #E7E8EC;border-radius:12px;padding:16px;transition:.15s;position:relative;overflow:hidden}
+.svc:hover{transform:none;box-shadow:0 4px 16px rgba(0,0,0,.06);border-color:#DCE1E6}
+.svc-top{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;font-size:22px;margin-bottom:12px}
+.svc h3{font-size:15px;line-height:1.2;margin-bottom:6px}
+.svc p{font-size:13px;color:var(--gray);margin-bottom:10px;min-height:36px}
+.svc-price{font-weight:800;font-size:14px}
+.svc-price s{color:var(--gray);font-weight:600;font-size:12px;margin-left:6px}
+.svc-btn{margin-top:12px;width:100%;padding:10px;border-radius:8px;background:#F0F2F5;border:none;font-weight:600;font-size:13px;cursor:pointer;color:#2C2D2E}
+.svc-btn:hover{background:var(--vk-blue);color:#fff;border-color:var(--vk-blue)}
+.svc.popular{border-color:#DCE1E6;box-shadow:none;outline:2px solid var(--vk-blue);outline-offset:-2px}
+.svc.popular::before{content:"ХИТ";position:absolute;right:10px;top:10px;background:var(--vk-blue);color:#fff;font-size:10px;font-weight:700;padding:3px 6px;border-radius:6px;letter-spacing:.02em;border:none}
+/* CALC */
+.calc-wrap{background:#fff;border-radius:12px;overflow:hidden;color:#000;box-shadow:0 1px 0 rgba(0,0,0,.04), 0 4px 24px rgba(0,0,0,.06);border:1px solid #E7E8EC}
+.calc-head{padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;border-bottom:1px solid #E7E8EC;background:#fff}
+.calc-head h2{font-size:21px;letter-spacing:-.01em;font-weight:700;color:#000}
+.calc-head p{color:#818C99;font-size:13px;margin-top:4px}
+.calc-body{display:grid;grid-template-columns:1.45fr .95fr;gap:0}
+.calc-left{padding:20px;background:#fff}
+.calc-right{padding:20px;background:#F9FAFB;border-left:1px solid #E7E8EC}
+.tabs{display:flex;gap:8px;overflow:auto;padding-bottom:8px;scrollbar-width:none}
+.tab{padding:7px 12px;border-radius:8px;border:1px solid #DCE1E6;background:#fff;color:#2C2D2E;font-weight:500;font-size:13px;white-space:nowrap;cursor:pointer}
+.tab.active{background:var(--vk-blue);color:#fff;border-color:var(--vk-blue)}
+.search{position:relative;margin:14px 0}
+.search input{width:100%;padding:11px 12px 11px 36px;border-radius:8px;border:1px solid #D3D9DE;background:#F5F5F5;color:#000;outline:none}
+.search input::placeholder{color:#818C99}
+.search i{position:absolute;left:12px;top:50%;transform:translateY(-50%);opacity:.6}
+.catalog{display:grid;gap:8px;max-height:420px;overflow:auto;padding-right:4px}
+.cat-item{display:flex;justify-content:space-between;gap:12px;align-items:center;background:#fff;border:1px solid #E7E8EC;padding:12px 14px;border-radius:10px}
+.cat-item:hover{background:#FAFBFC}
+.cat-item h4{font-size:13px;line-height:1.2;color:#000}
+.cat-item small{color:#818C99;font-size:12px}
+.cat-price{font-weight:800;white-space:nowrap}
+.qty{display:flex;align-items:center;gap:8px}
+.qbtn{width:28px;height:28px;border-radius:8px;border:1px solid #DCE1E6;background:#fff;color:#000;cursor:pointer;display:grid;place-items:center;font-weight:600}
+.qbtn:hover{background:#F0F2F5;color:#000}
+.add{padding:7px 12px;border-radius:8px;background:var(--vk-blue);color:#fff;border:1px solid var(--vk-blue);font-weight:600;font-size:12px;cursor:pointer}
+.add.added{background:#10B981}
+.cart-empty{color:#818C99;text-align:center;padding:24px 10px;font-size:14px;border:1px dashed #DCE1E6;border-radius:10px;background:#fff}
+.cart-list{display:grid;gap:10px;margin-bottom:16px}
+.cart-item{background:#fff;border:1px solid #E7E8EC;padding:12px;border-radius:10px;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.cart-item h4{font-size:13px}
+.cart-item small{color:#818C99}
+.cart-total{background:#fff;color:#000;border-radius:10px;padding:16px;border:1px solid #E7E8EC}
+.total-row{display:flex;justify-content:space-between;font-size:13px;color:var(--gray);margin-bottom:6px}
+.total-row b{color:var(--dark)}
+.total-big{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:12px;margin-top:10px}
+.total-big b{font-size:22px}
+.bonus{background:#E8F5E9;border:1px solid #C8E6C9;color:#1B5E20;padding:10px 12px;border-radius:10px;font-size:12px;font-weight:600;display:flex;gap:8px;align-items:center;margin:12px 0}
+.urgency{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}
+.urg{padding:10px;border-radius:10px;border:1px solid #DCE1E6;background:#fff;cursor:pointer;text-align:center}
+.urg.active{background:var(--vk-blue);color:#fff;border-color:var(--vk-blue)}
+.urg b{font-size:12px;display:block}
+.urg small{font-size:11px;opacity:.7}
+/* PRICES */
+.prices{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.price-col{background:#fff;border:1px solid #E7E8EC;border-radius:12px;overflow:hidden}
+.price-col h3{padding:14px 16px;background:#fff;color:#000;border-bottom:1px solid #E7E8EC;font-size:14px;font-weight:700;display:flex;justify-content:space-between;align-items:center}
+.price-list{padding:8px 0}
+.price-row{display:flex;justify-content:space-between;gap:12px;padding:10px 16px;font-size:14px;border-bottom:1px solid #F1F5F9}
+.price-row:last-child{border:none}
+.price-row b{white-space:nowrap}
+/* WHY */
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.why-card{background:#fff;border:1px solid #E7E8EC;border-radius:12px;padding:16px;display:flex;gap:14px}
+.why-card i{width:42px;height:42px;background:#E1E8ED;color:var(--vk-blue);display:grid;place-items:center;border-radius:10px;font-size:20px;flex:0 0 42px}
+.why-card h4{font-size:14px;margin-bottom:4px}
+.why-card p{font-size:13px;color:var(--gray)}
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.step{background:#fff;border:1px solid #E7E8EC;border-radius:12px;padding:18px;text-align:center;position:relative}
+.step::after{content:"→";position:absolute;right:-10px;top:50%;transform:translateY(-50%);width:22px;height:22px;background:var(--vk-blue);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:700;z-index:2}
+.step:last-child::after{display:none}
+.step-num{width:32px;height:32px;background:var(--vk-blue);color:#fff;border-radius:50%;display:grid;place-items:center;font-weight:700;margin:0 auto 10px;font-size:14px}
+.step h4{font-size:14px;margin-bottom:4px}
+.step p{font-size:13px;color:var(--gray)}
+/* REVIEWS */
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.rev{background:#fff;border:1px solid #E7E8EC;border-radius:12px;padding:16px}
+.rev-head{display:flex;gap:12px;align-items:center;margin-bottom:10px}
+.rev-head img{width:44px;height:44px;border-radius:50%;object-fit:cover}
+.rev-head b{font-size:14px}
+.rev-head small{color:var(--gray);font-size:12px}
+.rev p{font-size:13px;color:#334155;line-height:1.6}
+.rev-stars{color:#F59E0B;font-size:12px;margin-top:8px}
+/* FAQ */
+.faq{max-width:760px;margin:0 auto;display:grid;gap:10px}
+.fq{background:#fff;border:1px solid #E7E8EC;border-radius:12px;overflow:hidden}
+.fq-q{padding:16px 18px;display:flex;justify-content:space-between;gap:12px;cursor:pointer;font-weight:700;font-size:14px;align-items:center}
+.fq-a{padding:0 18px 16px;color:var(--gray);font-size:13px;line-height:1.6;display:none}
+.fq.open .fq-a{display:block}
+.fq.open{border-color:#DCE1E6;box-shadow:none;background:#FAFBFC}
+/* CONTACT */
+.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:16px}
+.contact-card{background:#fff;border:1px solid #E7E8EC;border-radius:12px;padding:18px}
+.contact-card h3{font-size:18px;margin-bottom:12px}
+.c-row{display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid #F1F5F9;font-size:14px}
+.c-row:last-child{border:none}
+.c-row i{width:36px;height:36px;background:var(--light);border:1px solid var(--line);border-radius:10px;display:grid;place-items:center}
+.map{border-radius:12px;overflow:hidden;border:1px solid #E7E8EC;background:#EDEEF0;min-height:320px;position:relative}
+.map iframe{width:100%;height:100%;border:0;min-height:320px}
+/* FOOTER */
+.footer{background:#19191A;color:#99A2AD;padding:28px 0}
+.footer-grid{display:grid;grid-template-columns:1.4fr .7fr .7fr 1fr;gap:20px}
+.footer h4{color:#fff;font-size:14px;margin-bottom:10px}
+.footer a{color:#94A3B8;font-size:13px;line-height:1.9}
+.footer a:hover{color:#fff}
+/* MODAL */
+.modal{position:fixed;inset:0;background:rgba(15,23,42,.6);backdrop-filter:blur(6px);display:none;place-items:center;z-index:100;padding:16px}
+.modal.open{display:grid}
+.modal-card{background:#fff;border-radius:20px;max-width:520px;width:100%;overflow:hidden;box-shadow:var(--shadow-lg);max-height:90vh;overflow:auto}
+.modal-head{padding:18px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
+.modal-body{padding:20px}
+.success{position:fixed;inset:0;display:none;place-items:center;background:rgba(15,23,42,.6);backdrop-filter:blur(6px);z-index:101;padding:16px}
+.success.open{display:grid}
+.success-card{background:#fff;border-radius:20px;max-width:440px;width:100%;padding:28px;text-align:center}
+/* STICKY MOBILE BAR */
+.mobile-bar{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);padding:10px 14px;display:none;gap:10px;z-index:40;box-shadow:0 -8px 20px rgba(15,23,42,.08)}
+/* RESPONSIVE */
+@media(max-width:1020px){
+  .hero-grid{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .calc-body{grid-template-columns:1fr}
+  .calc-right{border-left:none;border-top:1px solid rgba(255,255,255,.06)}
+  .why{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .step::after{display:none}
+  .reviews{grid-template-columns:1fr 1fr}
+  .prices{grid-template-columns:1fr}
+  .contact{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .nav{display:none}
+}
+@media(max-width:640px){
+  .h1{font-size:34px}
+  .grid2{grid-template-columns:1fr}
+  .why{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .reviews{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:1fr}
+  .mobile-bar{display:flex}
+  .header-actions .btn-ghost{display:none}
+  .burger{display:grid}
+  body{padding-bottom:72px}
+  .urgency{grid-template-columns:1fr}
+  .hero-trust{gap:8px}
+}
+.pulse{animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(0,119,255,.35)}70%{box-shadow:0 0 0 10px rgba(0,119,255,0)}100%{box-shadow:0 0 0 0 rgba(0,119,255,0)}}
+.float-wa{position:fixed;right:16px;bottom:92px;width:56px;height:56px;background:#25D366;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:26px;box-shadow:0 10px 20px rgba(0,0,0,.18);z-index:45;text-decoration:none}
+@media(max-width:640px){.float-wa{bottom:88px}}
+/* Anim */
+.reveal{opacity:0;transform:translateY(12px);transition:.6s}
+.reveal.in{opacity:1;transform:none}
+
+
+
+</style>
+</head>
+<body>
+
+<div class="topbar" style="background:#19191A">
+  <div class="container topbar-inner">
+    <div class="topbar-links">
+      <span>📍 Москва и МО — выезд 45 минут</span>
+      <span>🕒 Работаем ежедневно 08:00–22:00 — срочно 24/7</span>
+    </div>
+    <div class="topbar-links">
+      <span>✅ Гарантия до 1 года</span>
+      <span>💳 Оплата после результата</span>
+      <span style="background:#10B981;color:#fff;padding:4px 8px;border-radius:6px;font-weight:800">Средний рейтинг 4.9 ★★★★★</span>
+    </div>
+  </div>
+</div>
+
+
+<header class="header">
+  <div class="container header-inner">
+    <a class="logo" href="#">
+      <div class="logo-mark" style="background:var(--vk-blue);color:#fff;border:none">М<span style="color:#fff">•</span>Ч</div>
+      <div class="logo-text">
+        <strong>МАСТЕР НА ЧАС</strong>
+        <small>Работаем с 2012 года • по договору</small>
+      </div>
+    </a>
+    <nav class="nav">
+      <a href="#services">Услуги и цены</a>
+      <a href="#calc">Калькулятор</a>
+      <a href="#why">Почему мы</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="header-actions">
+      <div class="phone">
+        <b>+7 (495) 123-45-67</b>
+        <s>Бесплатная консультация 2 мин</s>
+      </div>
+      <button class="btn btn-ghost" onclick="openModal()">Заказать звонок</button>
+      <button class="btn btn-primary pulse" onclick="scrollToCalc()">Вызвать мастера</button>
+      <button class="burger" onclick="toggleNav()">☰</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="badge" style="background:#E1E8ED;color:#0077FF">⚡ Приедем за 45 минут • Выезд 0₽ при заказе от 1500₽</span>
+      <h1 class="h1">Мастер на час <span>решит всё<br>за 1 визит</span></h1>
+      <p class="hero-sub">Электрика, сантехника, сборка мебели, мелкий ремонт — от 450₽. Фиксируем цену по телефону, не меняем на месте. Оплата только за результат.</p>
+      <div class="hero-cta">
+        <button class="btn btn-primary btn-lg" onclick="scrollToCalc()">🧮 Рассчитать за 30 сек — скидка 10%</button>
+        <a href="tel:+74951234567" class="btn btn-dark btn-lg">📞 +7 (495) 123-45-67</a>
+      </div>
+      <div class="checks">
+        <div class="check"><i>✓</i> Трезвая цена — без накруток</div>
+        <div class="check"><i>✓</i> Договор и гарантия 12 месяцев</div>
+        <div class="check"><i>✓</i> Мастер со своим инструментом</div>
+        <div class="check"><i>✓</i> Уборка мусора за собой</div>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-pill"><span class="stars">★★★★★</span> <b>4.9 / 5</b> <small style="color:var(--gray)">2 847 отзывов</small></div>
+        <div class="trust-pill">👷 <b>12 400+</b> клиентов в месяц</div>
+        <div class="trust-pill">🛡️ <b>Гарантия</b> по договору</div>
+      </div>
+    </div>
+
+    <div style="display:grid;gap:14px">
+      <div class="hero-card">
+        <div class="hero-card-head">
+          <b>Быстрый вызов мастера</b>
+          <span>⏱ Ответ 2 минуты</span>
+        </div>
+        <form class="hero-form" onsubmit="handleQuickForm(event)">
+          <div style="display:grid;gap:10px">
+            <input required class="inp" placeholder="Ваше имя" name="name">
+            <input required class="inp" type="tel" placeholder="+7 (___) ___-__-__" name="phone" id="phoneMain">
+            <div class="grid2">
+              <select class="inp" name="service">
+                <option>Муж на час</option>
+                <option>Электрик</option>
+                <option>Сантехник</option>
+                <option>Сборка мебели</option>
+                <option>Плиточник</option>
+                <option>Плотник / Замки</option>
+              </select>
+              <select class="inp" name="time">
+                <option>Срочно (45 мин)</option>
+                <option>Сегодня</option>
+                <option>Завтра</option>
+                <option>На выходных</option>
+              </select>
+            </div>
+            <button class="btn btn-primary" style="width:100%;padding:16px">Получить расчёт и скидку 10% →</button>
+            <div class="price-note">
+              <span style="font-size:13px">Минимальный заказ <b>1500₽</b> • Выезд 0₽</span>
+              <strong>−10%</strong>
+            </div>
+            <div class="hint">Нажимая кнопку, вы соглашаетесь с <u>политикой конфиденциальности</u>. Не спамим, перезвоним за 2 минуты.</div>
+          </div>
+        </form>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=900&q=80" alt="Мастер на час">
+        <div class="hero-badge">
+          <div style="width:44px;height:44px;border-radius:10px;background:#E1E8ED;display:grid;place-items:center;font-size:20px">🔧</div>
+          <div>
+            <b>Без выходных</b><br><small>Работаем даже в дождь<br>и пробки — считаем маршрут</small>
+          </div>
+          <div style="text-align:right"><small>от</small><b style="color:var(--dark);background:var(--vk-blue);padding:2px 6px;border-radius:6px">450₽</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOGOS -->
+<div style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0">
+  <div class="container" style="display:flex;gap:18px;flex-wrap:wrap;justify-content:space-between;align-items:center;color:var(--gray);font-weight:700;font-size:12px;letter-spacing:.06em;text-transform:uppercase">
+    <span>Нам доверяют:</span>
+    <span style="display:flex;gap:12px;flex-wrap:wrap">
+      <span>🏢 ЖК •</span><span>🏠 Коттеджи •</span><span>🏬 Офисы •</span><span>🏫 Садики и школы •</span><span>🏥 Клиники</span>
+    </span>
+    <span style="color:var(--dark)">✓ Работаем по договору с юр. и физ. лицами</span>
+  </div>
+</div>
+
+<section id="services" class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="badge">Каталог услуг • 90+ работ</span>
+      <h2>Любая бытовая задача — один звонок</h2>
+      <p>Цены фиксированные и честные. На месте не растут. Нажмите «Добавить в расчёт» — попадёт в калькулятор.</p>
+    </div>
+    <div class="services-grid" id="servicesGrid"></div>
+    <div style="text-align:center;margin-top:18px">
+      <button class="btn btn-ghost" onclick="scrollToCalc()">Перейти в калькулятор → рассчитать всё сразу</button>
+    </div>
+  </div>
+</section>
+
+<section id="calc" class="section" style="background:var(--vk-bg);padding-top:28px">
+  <div class="container">
+    <div class="calc-wrap reveal in">
+      <div class="calc-head">
+        <div>
+          <h2>🧮 Супер-калькулятор — узнай точную цену за 30 секунд</h2>
+          <p>Выбери услуги, укажи количество и срочность. Скидка применится автоматически. Зафиксируй цену — она не изменится на объекте.</p>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <span style="background:#E8F5E9;color:#1B5E20;padding:6px 10px;border-radius:8px;font-weight:700;font-size:12px">−10% от 3 услуг • −15% от 5</span>
+          <span style="background:#EDEEF0;color:#818C99;padding:6px 10px;border-radius:8px;font-size:12px">⏱ 30 сек</span>
+        </div>
+      </div>
+      <div class="calc-body">
+        <div class="calc-left">
+          <div class="tabs" id="tabs"></div>
+          <div class="search"><i>🔍</i><input id="search" placeholder="Поиск: люстра, розетка, смеситель, шкаф..." oninput="renderCatalog()"></div>
+          <div class="catalog" id="catalog"></div>
+          <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+            <span style="font-size:12px;color:#94A3B8">Быстрый набор:</span>
+            <button class="tab" style="padding:6px 10px;font-size:12px" onclick="quickAdd(['Установка люстры','Установка розетки','Навес полок'])">⚡ Набор электрика</button>
+            <button class="tab" style="padding:6px 10px;font-size:12px" onclick="quickAdd(['Установка смесителя','Установка раковины','Устранение засора'])">🚿 Сантех-набор</button>
+            <button class="tab" style="padding:6px 10px;font-size:12px" onclick="quickAdd(['Сборка шкафа','Сборка кровати','Навес карниза'])">🛋 Переезд / Сборка</button>
+          </div>
+        </div>
+        <div class="calc-right">
+          <h3 style="font-size:16px;margin-bottom:4px">Ваш расчёт</h3>
+          <p style="color:#94A3B8;font-size:13px;margin-bottom:12px">Добавь услуги слева — увидишь итог и скидку сразу</p>
+          <div id="cart"></div>
+          <div style="margin-top:12px">
+            <label style="font-size:13px;font-weight:700">Срочность</label>
+            <div class="urgency">
+              <div class="urg active" data-k="1" onclick="setUrgency(this)"><b>Стандарт</b><small>в течение дня</small></div>
+              <div class="urg" data-k="1.25" onclick="setUrgency(this)"><b>Срочно +25%</b><small>за 45-90 мин</small></div>
+              <div class="urg" data-k="1.4" onclick="setUrgency(this)"><b>Ночь/Вых +40%</b><small>после 22:00</small></div>
+            </div>
+            <label style="font-size:13px;font-weight:700">Материалы</label>
+            <div style="display:flex;gap:8px;margin:8px 0 12px">
+              <label style="flex:1;display:flex;gap:8px;align-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);padding:10px;border-radius:10px;cursor:pointer"><input type="radio" name="mat" value="client" checked> <span style="font-size:13px"><b>Мои</b><br><small style="color:#94A3B8">дешевле</small></span></label>
+              <label style="flex:1;display:flex;gap:8px;align-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);padding:10px;border-radius:10px;cursor:pointer"><input type="radio" name="mat" value="master"> <span style="font-size:13px"><b>Мастера</b><br><small style="color:#94A3B8">+ чек</small></span></label>
+            </div>
+            <div class="cart-total" id="totalBox"></div>
+            <div class="bonus" id="bonusBox">🎁 Скидка 10% применилась! Зафиксируй цену сейчас — действует 24 часа.</div>
+            <form onsubmit="handleCalcOrder(event)" style="display:grid;gap:10px;margin-top:14px">
+              <input required class="inp" name="name" placeholder="Ваше имя">
+              <input required class="inp" type="tel" name="phone" placeholder="+7 (___) ___-__-__">
+              <input class="inp" name="address" placeholder="Адрес (улица, дом) — для точного времени прибытия">
+              <button class="btn btn-primary btn-lg" style="width:100%">Зафиксировать цену и вызвать мастера →</button>
+              <div style="font-size:11px;color:#94A3B8;text-align:center">Выезд 0₽ при заказе от 1500₽ • Цена не изменится на месте • Гарантия 12 мес</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px">
+      <div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;gap:10px;align-items:center"><span style="font-size:20px">💬</span><div><b style="font-size:13px">Отправим смету в WhatsApp/Telegram</b><br><small style="color:var(--gray)">за 2 минуты</small></div></div>
+      <div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;gap:10px;align-items:center"><span style="font-size:20px">📄</span><div><b style="font-size:13px">Договор и акт</b><br><small style="color:var(--gray)">выдаём на руки</small></div></div>
+      <div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;gap:10px;align-items:center"><span style="font-size:20px">💳</span><div><b style="font-size:13px">Оплата после проверки</b><br><small style="color:var(--gray)">наличные / перевод / СБП</small></div></div>
+      <div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;gap:10px;align-items:center"><span style="font-size:20px">🧹</span><div><b style="font-size:13px">Убираем мусор</b><br><small style="color:var(--gray)">после себя</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="badge badge-green">Честный прайс • фикс цена</span>
+      <h2>Прозрачный прайс-лист</h2>
+      <p>Минимальный заказ — 1500₽. Выезд бесплатный при заказе от этой суммы. Точную стоимость фиксируем по фото/видео в мессенджере.</p>
+    </div>
+    <div class="prices">
+      <div class="price-col">
+        <h3>🔌 Электрика <span style="background:var(--vk-blue);color:#fff;padding:4px 8px;border-radius:6px;font-size:11px;font-weight:700">от 150₽</span></h3>
+        <div class="price-list" id="priceElec"></div>
+      </div>
+      <div class="price-col">
+        <h3>🚿 Сантехника <span style="background:var(--vk-blue);color:#fff;padding:4px 8px;border-radius:6px;font-size:11px;font-weight:700">от 750₽</span></h3>
+        <div class="price-list" id="priceSanteh"></div>
+      </div>
+      <div class="price-col">
+        <h3>🛋 Мебель и быт <span style="background:var(--vk-blue);color:#fff;padding:4px 8px;border-radius:6px;font-size:11px;font-weight:700">от 450₽</span></h3>
+        <div class="price-list" id="priceMebel"></div>
+      </div>
+      <div class="price-col">
+        <h3>🔨 Плитка / Плотник / Малярка <span style="background:var(--vk-blue);color:#fff;padding:4px 8px;border-radius:6px;font-size:11px;font-weight:700">от 400₽</span></h3>
+        <div class="price-list" id="priceOther"></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:16px;color:var(--gray);font-size:12px">* Цены ориентировочные, зависят от сложности. Точная — после фото/осмотра. Но фиксируется и не меняется без вашего согласия.</div>
+  </div>
+</section>
+
+<section id="why" class="section" style="background:#fff">
+  <div class="container">
+    <div class="section-head">
+      <h2>Почему 12 400 клиентов выбирают нас</h2>
+      <p>Мы убрали всё, что раздражает в других сервисах: накрутки, опоздания, грязную работу.</p>
+    </div>
+    <div class="why">
+      <div class="why-card"><i>⏱</i><div><h4>Приедем за 45 минут</h4><p>Свой автопарк и мастера по районам. Считаем пробки и погоду.</p></div></div>
+      <div class="why-card"><i>💰</i><div><h4>Фикс-прайс до старта</h4><p>Цена из калькулятора фиксируется. Без доплат «за сложность».</p></div></div>
+      <div class="why-card"><i>🛡️</i><div><h4>Гарантия 12 месяцев</h4><p>Договор, акт, чек. Если что-то не так — переделаем бесплатно.</p></div></div>
+      <div class="why-card"><i>🎓</i><div><h4>Только профи со стажем 5+ лет</h4><p>Проверяем паспорт, отзывы, делаем тестовые задания.</p></div></div>
+      <div class="why-card"><i>🧳</i><div><h4>Свой инструмент и пылесос</h4><p>Не просим у вас дрель. Убираем пыль и мусор.</p></div></div>
+      <div class="why-card"><i>💬</i><div><h4>На связи 24/7</h4><p>Фото-осмотр по WhatsApp, смета за 2 минуты, напоминания.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Как вызываете — так и получаете</h2>
+      <p>4 простых шага. Без лишних звонков и ожиданий.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><h4>Заявка 30 сек</h4><p>Калькулятор, телефон или WhatsApp</p></div>
+      <div class="step"><div class="step-num">2</div><h4>Подтверждение 2 мин</h4><p>Перезвоним, фиксируем цену и время</p></div>
+      <div class="step"><div class="step-num">3</div><h4>Мастер в пути</h4><p>Трекинг по SMS, приедет со всем нужным</p></div>
+      <div class="step"><div class="step-num">4</div><h4>Готово — оплата</h4><p>Проверяете, подписываете акт, платите</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="section" style="background:var(--vk-bg)">
+  <div class="container">
+    <div class="section-head">
+      <span class="badge">★★★★★ 4.9 из 5 • 2 847 отзывов</span>
+      <h2>Нас советуют соседям</h2>
+      <p>Реальные отзывы с Авито, Яндекс и нашего сайта. Публикуем только с согласия.</p>
+    </div>
+    <div class="reviews">
+      <div class="rev">
+        <div class="rev-head"><img src="https://i.pravatar.cc/100?img=32"><div><b>Виктория, ЖК Мещерский лес</b><br><small>Сборка гардеробной • 12 авг 2026</small></div></div>
+        <p>«Главное — всё понятно: какая услуга, сколько платить, когда приедет. Сборщик собрал стенку идеально, мусор вынес. Второй раз вызываю — всегда супер.»</p>
+        <div class="rev-stars">★★★★★</div>
+      </div>
+      <div class="rev">
+        <div class="rev-head"><img src="https://i.pravatar.cc/100?img=15"><div><b>Андрей, Химки</b><br><small>Укладка плитки в ванной</small></div></div>
+        <p>«Прислали плиточника — выложил стены и пол в ванной идеально. Менеджер вежливый, мастер аккуратный. Цены — средние по Москве, но качество выше.»</p>
+        <div class="rev-stars">★★★★★</div>
+      </div>
+      <div class="rev">
+        <div class="rev-head"><img src="https://i.pravatar.cc/100?img=26"><div><b>Дина, Москва</b><br><small>Мелкий ремонт • бачок, дверца</small></div></div>
+        <p>«Живу одна, даже гвоздь забить проблема. Вызываю «мастера на час» — карниз, смеситель, зеркало. Звонок — к обеду уже всё готово. И недорого.»</p>
+        <div class="rev-stars">★★★★★</div>
+      </div>
+      <div class="rev">
+        <div class="rev-head"><img src="https://i.pravatar.cc/100?img=12"><div><b>Людмила</b><br><small>Электрика • пропал свет</small></div></div>
+        <p>«Вдруг пропал свет, соседи пробили провод. Приехали оперативно, всё быстро сделали. Рекомендую!»</p>
+        <div class="rev-stars">★★★★★</div>
+      </div>
+      <div class="rev">
+        <div class="rev-head"><img src="https://i.pravatar.cc/100?img=48"><div><b>Наталья</b><br><small>Устранение засора</small></div></div>
+        <p>«Стала подниматься вода в раковине. Сантехник справился на 5+, теперь всё уходит. Только к вам теперь.»</p>
+        <div class="rev-stars">★★★★★</div>
+      </div>
+      <div class="rev">
+        <div class="rev-head"><img src="https://i.pravatar.cc/100?img=33"><div><b>Светлана</b><br><small>Установка люстры</small></div></div>
+        <p>«Поменяли люстру в гостиной — быстро, аккуратно. Заплатила ровно столько, сколько сказали при оформлении. Вы — лучшие!»</p>
+        <div class="rev-stars">★★★★★</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:16px"><a href="#" class="btn btn-ghost">Смотреть все 2 847 отзывов на Яндекс Картах →</a></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Отвечаем на частые вопросы</h2>
+    </div>
+    <div class="faq" id="faq">
+      <div class="fq open"><div class="fq-q" onclick="toggleFaq(this)">Сколько стоит выезд мастера? <span>+</span></div><div class="fq-a">Выезд 0₽ при заказе от 1500₽ (минимальный заказ). Если сумма меньше — выезд 500₽, но он вычитается из стоимости при заказе на месте.</div></div>
+      <div class="fq"><div class="fq-q" onclick="toggleFaq(this)">Цена из калькулятора — окончательная? <span>+</span></div><div class="fq-a">Да, фиксируем её на 24 часа. Если на месте окажется дополнительная сложность — предупредим и согласуем доплату до начала работ. Без сюрпризов.</div></div>
+      <div class="fq"><div class="fq-q" onclick="toggleFaq(this)">За сколько приедете? Можно срочно? <span>+</span></div><div class="fq-a">Стандарт — сегодня в удобное окно (2–3 часа). Срочно — в течение 45–90 минут. Ночью и в выходные тоже работаем (+40% к прайсу).</div></div>
+      <div class="fq"><div class="fq-q" onclick="toggleFaq(this)">Даете гарантию? <span>+</span></div><div class="fq-a">Да, до 12 месяцев по договору. Выдаём акт и чек. Если что-то пойдёт не так — бесплатно переделаем или вернём деньги.</div></div>
+      <div class="fq"><div class="fq-q" onclick="toggleFaq(this)">Нужно ли покупать материалы? <span>+</span></div><div class="fq-a">Можете сами или поручите мастеру — привезёт с чеком без наценки. В калькуляторе выберите «Материалы мастера» — добавим ориентировочную стоимость.</div></div>
+      <div class="fq"><div class="fq-q" onclick="toggleFaq(this)">Работаете с юр. лицами? <span>+</span></div><div class="fq-a">Да, по безналу с НДС, даём полный пакет закрывающих документов. Обслуживаем офисы, кафе, садики, ЖК.</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contacts" class="section" style="background:#19191A;color:#fff">
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;gap:16px;align-items:end;flex-wrap:wrap;margin-bottom:18px">
+      <div>
+        <h2 style="font-size:30px;letter-spacing:-.03em">Приедем в любой район Москвы и МО</h2>
+        <p style="color:#94A3B8">Офис — Москва, ул. Тверская 12 • Работаем по всем округам + 30 городов МО</p>
+      </div>
+      <div style="display:flex;gap:10px">
+        <a href="tel:+74951234567" class="btn btn-primary">📞 Позвонить</a>
+        <button class="btn" style="background:#25D366;color:#fff" onclick="openWa()">WhatsApp</button>
+      </div>
+    </div>
+    <div class="contact">
+      <div class="contact-card" style="color:var(--dark)">
+        <h3>Контакты</h3>
+        <div class="c-row"><i>📞</i><div><b>+7 (495) 123-45-67</b><br><small style="color:var(--gray)">Ежедневно 08:00–22:00, срочно 24/7</small></div></div>
+        <div class="c-row"><i>✉️</i><div><b>info@masters-chas.ru</b><br><small style="color:var(--gray)">Ответим за 10 минут</small></div></div>
+        <div class="c-row"><i>📍</i><div><b>Москва и МО</b><br><small style="color:var(--gray)">Выезд 45 минут • Балашиха, Химки, Подольск, Мытищи, Люберцы, Королёв и др.</small></div></div>
+        <div class="c-row"><i>💬</i><div><b>WhatsApp / Telegram</b><br><small style="color:var(--gray)">Фото-осмотр и смета за 2 минуты → <a href="#" onclick="openWa()" style="color:var(--vk-blue)">написать</a></small></div></div>
+        <div style="margin-top:14px;background:var(--light);border:1px solid var(--line);border-radius:12px;padding:12px">
+          <b style="font-size:13px">Акция сегодня:</b><br><small style="color:var(--gray)">Скидка 10% при заказе из калькулятора + бесплатная диагностика до 15 мин. Промокод: <b style="color:var(--vk-blue)">MASTERS10</b></small>
+        </div>
+      </div>
+      <form class="contact-card" style="color:var(--dark)" onsubmit="handleContact(event)">
+        <h3>Оставьте заявку — перезвоним за 2 минуты</h3>
+        <div style="display:grid;gap:10px">
+          <input required class="inp" name="name" placeholder="Ваше имя">
+          <input required class="inp" type="tel" name="phone" placeholder="+7 (___) ___-__-__">
+          <textarea class="inp" name="msg" rows="3" placeholder="Что нужно сделать? (например: повесить люстру + 2 розетки)"></textarea>
+          <div style="display:flex;gap:8px">
+            <label style="font-size:12px;display:flex;gap:6px;align-items:center"><input type="checkbox" required> Согласен с политикой конфиденциальности</label>
+          </div>
+          <button class="btn btn-primary btn-lg" style="width:100%">Отправить заявку — получить скидку →</button>
+          <div style="text-align:center;color:var(--gray);font-size:11px">Выезд 0₽ при заказе от 1500₽ • Гарантия 12 мес</div>
+        </div>
+      </form>
+    </div>
+    <div class="map" style="margin-top:16px">
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1a2b3c&source=constructor&ll=37.6176%2C55.7558&z=10&pt=37.6176,55.7558,pm2rdm" loading="lazy"></iframe>
+      <div style="position:absolute;left:12px;top:12px;background:#fff;color:var(--dark);padding:10px 12px;border-radius:12px;box-shadow:var(--shadow);font-size:12px;font-weight:700">📍 Зона выезда: вся Москва + МО до 30 км от МКАД • Приедем за 45 мин</div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div style="display:flex;gap:10px;align-items:center;margin-bottom:10px"><div class="logo-mark" style="background:#fff;color:var(--vk-blue)">М<span style="color:var(--vk-blue)">•</span>Ч</div><b style="color:#fff">МАСТЕР НА ЧАС</b></div>
+      <p style="font-size:13px;line-height:1.6">Сервис бытовых услуг — с 2012 года. Работаем официально по договору, с гарантией и чеком. 90+ услуг: электрик, сантехник, сборка мебели, плотник, плиточник, малярка.</p>
+      <div style="margin-top:12px;display:flex;gap:8px"><span style="background:#2C2D2E;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px">ИНН 7701234567</span><span style="background:#2C2D2E;color:#fff;padding:6px 10px;border-radius:8px;font-size:12px">ОГРН 1234567890123</span></div>
+    </div>
+    <div>
+      <h4>Услуги</h4>
+      <a href="#services">Муж на час</a><br>
+      <a href="#services">Электрик</a><br>
+      <a href="#services">Сантехник</a><br>
+      <a href="#services">Сборка мебели</a><br>
+      <a href="#services">Плотник / Замки</a><br>
+      <a href="#services">Плиточник</a><br>
+      <a href="#services">Малярные работы</a>
+    </div>
+    <div>
+      <h4>Информация</h4>
+      <a href="#calc">Калькулятор</a><br>
+      <a href="#why">Почему мы</a><br>
+      <a href="#reviews">Отзывы</a><br>
+      <a href="#">Прайс-лист</a><br>
+      <a href="#">Гарантия</a><br>
+      <a href="#">Вакансии</a>
+    </div>
+    <div>
+      <h4>Связаться</h4>
+      <p style="font-size:13px"><b style="color:#fff;font-size:16px">+7 (495) 123-45-67</b><br>Москва и МО, выезд 45 мин<br>Ежедневно 08:00–22:00</p>
+      <div style="margin-top:10px;display:flex;gap:8px">
+        <a href="#" class="btn" style="background:#25D366;color:#fff;padding:10px 12px;font-size:13px">WhatsApp</a>
+        <a href="#" class="btn" style="background:#0088CC;color:#fff;padding:10px 12px;font-size:13px">Telegram</a>
+      </div>
+      <p style="font-size:11px;margin-top:10px">© 2026 Мастер на Час. Не является публичной офертой. </p>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+74951234567" class="btn btn-dark" style="flex:1">📞 Позвонить</a>
+  <button class="btn btn-primary" style="flex:1.2" onclick="scrollToCalc()">🧮 Рассчитать</button>
+</div>
+
+<a class="float-wa" href="https://wa.me/74951234567" target="_blank" title="Написать в WhatsApp">💬</a>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-card">
+    <div class="modal-head"><b>Заказать звонок</b><button onclick="closeModal()" style="width:32px;height:32px;border-radius:8px;border:1px solid var(--line);background:#fff;cursor:pointer">✕</button></div>
+    <div class="modal-body">
+      <p style="color:var(--gray);font-size:13px;margin-bottom:12px">Оставьте номер — перезвоним за 2 минуты, подскажем цену и свободное время.</p>
+      <form onsubmit="handleQuickForm(event)" style="display:grid;gap:10px">
+        <input required class="inp" name="name" placeholder="Ваше имя">
+        <input required class="inp" type="tel" name="phone" placeholder="+7 (___) ___-__-__">
+        <select class="inp" name="service"><option>Муж на час</option><option>Электрик</option><option>Сантехник</option><option>Сборка мебели</option></select>
+        <button class="btn btn-primary btn-lg" style="width:100%">Жду звонка →</button>
+        <div style="font-size:11px;color:var(--gray);text-align:center">Выезд 0₽ при заказе от 1500₽ • Гарантия 12 мес</div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="success" id="success">
+  <div class="success-card">
+    <div style="width:64px;height:64px;background:#ECFDF5;color:#059669;border-radius:50%;display:grid;place-items:center;font-size:28px;margin:0 auto 12px">✓</div>
+    <h3 style="font-size:20px">Заявка принята!</h3>
+    <p style="color:var(--gray);font-size:14px;margin:8px 0 16px">Спасибо! Менеджер перезвонит в течение <b>2 минут</b> и зафиксирует цену.<br>Скидка <b style="color:var(--vk-blue)">10%</b> уже применена.</p>
+    <div id="successDetail" style="background:var(--light);border:1px solid var(--line);border-radius:12px;padding:12px;text-align:left;font-size:13px;margin-bottom:14px"></div>
+    <button class="btn btn-dark" style="width:100%" onclick="closeSuccess()">Отлично, жду звонка</button>
+  </div>
+</div>
+
+<script>
+const services = [
+  {cat:'Муж на час', icon:'🛠️', title:'Навес картин, зеркал', price:750, old:900, popular:false, desc:'Аккуратно, по уровню, с уборкой'},
+  {cat:'Муж на час', icon:'🗄️', title:'Навес полок, шкафа', price:900, old:null, popular:true, desc:'На бетон, гипсокартон, с дюбелями'},
+  {cat:'Муж на час', icon:'📺', title:'Кронштейн для TV/СВЧ', price:450, old:null, popular:true, desc:'С настройкой и уровнем'},
+  {cat:'Муж на час', icon:'🪟', title:'Установка карниза', price:1050, old:null, popular:false, desc:'Потолочный/настенный'},
+  {cat:'Муж на час', icon:'🪞', title:'Установка жалюзи', price:1050, old:null, popular:false, desc:'Горизонтальные/вертикальные'},
+  {cat:'Электрика', icon:'💡', title:'Установка люстры', price:630, old:810, popular:true, desc:'Крюк/планка, сборка + подключение'},
+  {cat:'Электрика', icon:'🔦', title:'Светильник/бра', price:420, old:450, popular:false, desc:'Настенный, потолочный'},
+  {cat:'Электрика', icon:'🔌', title:'Розетка/выключатель', price:450, old:null, popular:true, desc:'Накладная/встраиваемая'},
+  {cat:'Электрика', icon:'💡', title:'Сборка люстры', price:680, old:null, popular:false, desc:'Сложные модели'},
+  {cat:'Электрика', icon:'🧰', title:'Монтаж щитка', price:1850, old:null, popular:false, desc:'Сборка и подключение'},
+  {cat:'Электрика', icon:'📦', title:'Кабель-канал', price:150, old:null, popular:false, desc:'за м.п., с укладкой'},
+  {cat:'Электрика', icon:'🔔', title:'Звонок / кнопка', price:830, old:null, popular:false, desc:'Проводной/беспроводной'},
+  {cat:'Сантехника', icon:'🚿', title:'Установка смесителя', price:1000, old:1800, popular:true, desc:'На кухню/в ванную'},
+  {cat:'Сантехника', icon:'🚽', title:'Установка унитаза', price:3000, old:null, popular:false, desc:'С бачком и подключением'},
+  {cat:'Сантехника', icon:'🛁', title:'Установка ванны', price:2700, old:null, popular:false, desc:'Акрил/чугун/стальная'},
+  {cat:'Сантехника', icon:'🚿', title:'Душевая кабина', price:8850, old:null, popular:false, desc:'Сборка + герметизация'},
+  {cat:'Сантехника', icon:'🚰', title:'Раковина/мойка', price:1050, old:2400, popular:true, desc:'С сифоном'},
+  {cat:'Сантехника', icon:'🔧', title:'Устранение засора', price:900, old:1500, popular:true, desc:'Простой/сложный'},
+  {cat:'Сантехника', icon:'🌡️', title:'Полотенцесушитель', price:2550, old:null, popular:false, desc:'Водяной/электрический'},
+  {cat:'Сантехника', icon:'🔥', title:'Водонагреватель', price:4500, old:12800, popular:false, desc:'Бойлер 30-100л'},
+  {cat:'Мебель', icon:'🪑', title:'Сборка шкафа', price:1500, old:null, popular:true, desc:'Купе/распашной'},
+  {cat:'Мебель', icon:'🛏️', title:'Сборка кровати', price:1200, old:null, popular:false, desc:'С матрасом/ящиками'},
+  {cat:'Мебель', icon:'🗃️', title:'Сборка комода', price:1500, old:null, popular:false, desc:'IKEA/ Hoff и др.'},
+  {cat:'Мебель', icon:'🍽️', title:'Сборка стола', price:1200, old:null, popular:false, desc:'Обеденный/компьютерный'},
+  {cat:'Мебель', icon:'🚪', title:'Установка замка', price:1450, old:null, popular:false, desc:'Врезка/замена'},
+  {cat:'Плитка/Отделка', icon:'🧱', title:'Укладка плитки', price:1200, old:null, popular:false, desc:'за м², пол/стены'},
+  {cat:'Плитка/Отделка', icon:'🎨', title:'Покраска стен', price:350, old:null, popular:false, desc:'за м², 2 слоя'},
+  {cat:'Плитка/Отделка', icon:'🪚', title:'Плотницкие работы', price:800, old:null, popular:false, desc:'Полки, наличники'},
+];
+
+const categories = ['Все','Муж на час','Электрика','Сантехника','Мебель','Плитка/Отделка'];
+let activeCat = 'Все';
+let cart = [];
+let urgencyK = 1;
+
+function init(){
+  renderTabs();
+  renderServices();
+  renderCatalog();
+  renderCart();
+  renderPrices();
+  // reveal
+  const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+}
+function renderTabs(){
+  const el=document.getElementById('tabs');
+  el.innerHTML=categories.map(c=>`<button class="tab ${c===activeCat?'active':''}" onclick="setCat('${c}')">${c}</button>`).join('');
+}
+function setCat(c){activeCat=c;renderTabs();renderCatalog();}
+function renderServices(){
+  const grid=document.getElementById('servicesGrid');
+  grid.innerHTML=services.slice(0,12).map(s=>`
+    <div class="svc ${s.popular?'popular':''}">
+      <div class="svc-top" style="background:${s.popular?'#FFCC00':'#F5F5F5'}">${s.icon}</div>
+      <h3>${s.title}</h3>
+      <p>${s.desc} • ${s.cat}</p>
+      <div class="svc-price">от ${s.price} ₽ ${s.old?`<s>${s.old} ₽</s>`:''}</div>
+      <button class="svc-btn" onclick="addToCart('${s.title.replace(/'/g,"\\'")}')">+ Добавить в расчёт</button>
+    </div>
+  `).join('');
+}
+function filtered(){
+  const q=document.getElementById('search').value.toLowerCase();
+  return services.filter(s=>{
+    const catOk = activeCat==='Все' || s.cat===activeCat;
+    const qOk = !q || s.title.toLowerCase().includes(q) || s.desc.toLowerCase().includes(q) || s.cat.toLowerCase().includes(q);
+    return catOk && qOk;
+  })
+}
+function renderCatalog(){
+  const list=filtered();
+  const el=document.getElementById('catalog');
+  if(!list.length){el.innerHTML=`<div style="color:#94A3B8;text-align:center;padding:20px">Ничего не найдено. Попробуйте «люстра» или «смеситель»</div>`;return}
+  el.innerHTML=list.map(s=>{
+    const inCart=cart.find(c=>c.title===s.title);
+    return `<div class="cat-item">
+      <div>
+        <h4>${s.icon} ${s.title} <span style="font-weight:600;color:#94A3B8;font-size:11px">• ${s.cat}</span></h4>
+        <small>${s.desc}</small>
+      </div>
+      <div style="display:flex;gap:8px;align-items:center">
+        <span class="cat-price">${s.price} ₽</span>
+        ${inCart?`<div class="qty"><button class="qbtn" onclick="dec('${s.title.replace(/'/g,"\\'")}')">−</button><b>${inCart.qty}</b><button class="qbtn" onclick="inc('${s.title.replace(/'/g,"\\'")}')">+</button></div>`:`<button class="add" onclick="addToCart('${s.title.replace(/'/g,"\\'")}')">Добавить</button>`}
+      </div>
+    </div>`
+  }).join('');
+}
+function addToCart(title){
+  const s=services.find(x=>x.title===title);
+  if(!s) return;
+  const f=cart.find(c=>c.title===title);
+  if(f) f.qty++;
+  else cart.push({title:s.title, price:s.price, qty:1});
+  renderCatalog();renderCart();
+  // micro animation
+  const box=document.getElementById('cart');
+  box.animate([{transform:'scale(1)'},{transform:'scale(1.02)'},{transform:'scale(1)'}],{duration:250});
+}
+function inc(title){const f=cart.find(c=>c.title===title); if(f){f.qty++;renderCatalog();renderCart()}}
+function dec(title){const f=cart.find(c=>c.title===title); if(!f)return; f.qty--; if(f.qty<=0) cart=cart.filter(c=>c.title!==title); renderCatalog();renderCart()}
+function removeItem(title){cart=cart.filter(c=>c.title!==title);renderCatalog();renderCart()}
+function setUrgency(el){
+  document.querySelectorAll('.urg').forEach(u=>u.classList.remove('active'));
+  el.classList.add('active'); urgencyK=parseFloat(el.dataset.k); renderCart();
+}
+function renderCart(){
+  const el=document.getElementById('cart');
+  const totalBox=document.getElementById('totalBox');
+  const bonus=document.getElementById('bonusBox');
+  if(cart.length===0){
+    el.innerHTML=`<div class="cart-empty">🛒 Корзина пуста<br><small>Добавь 2–3 услуги — получишь скидку 10% автоматически</small></div>`;
+    totalBox.innerHTML=`
+      <div class="total-row"><span>Товары (0)</span><b>0 ₽</b></div>
+      <div class="total-row"><span>Срочность</span><b>×${urgencyK}</b></div>
+      <div class="total-row"><span>Скидка</span><b style="color:#10B981">0 ₽</b></div>
+      <div class="total-big"><span>Итого</span><b>0 ₽</b></div>
+      <div style="font-size:11px;color:#64748B;margin-top:6px">Минимальный заказ 1500 ₽ • Выезд 0₽ от этой суммы</div>
+    `;
+    bonus.style.display='none';
+    return;
+  }
+  el.innerHTML=`<div class="cart-list">`+cart.map(c=>`
+    <div class="cart-item">
+      <div><h4>${c.title}</h4><small>${c.price} ₽ × ${c.qty} = ${c.price*c.qty} ₽</small></div>
+      <div style="display:flex;gap:6px;align-items:center">
+        <div class="qty"><button class="qbtn" onclick="dec('${c.title.replace(/'/g,"\\'")}')">−</button><b>${c.qty}</b><button class="qbtn" onclick="inc('${c.title.replace(/'/g,"\\'")}')">+</button></div>
+        <button onclick="removeItem('${c.title.replace(/'/g,"\\'")}')" style="background:transparent;border:none;color:#94A3B8;cursor:pointer">✕</button>
+      </div>
+    </div>
+  `).join('')+`</div>`;
+  let subtotal=cart.reduce((s,c)=>s+c.price*c.qty,0);
+  let withUrgency=Math.round(subtotal*urgencyK);
+  let disc=0;
+  if(cart.reduce((s,c)=>s+c.qty,0)>=5) disc=0.15;
+  else if(cart.length>=3 || cart.reduce((s,c)=>s+c.qty,0)>=3) disc=0.10;
+  else if(cart.length>=2) disc=0.05;
+  let discount=Math.round(withUrgency*disc);
+  let total=Math.max(0,withUrgency-discount);
+  if(total>0 && total<1500) total=1500;
+  // bonus visibility
+  if(disc>0){bonus.style.display='flex'; bonus.innerHTML=`🎁 Скидка ${disc*100}% применена! Экономия ${discount} ₽ — зафиксируй цену, действует 24 часа.`}
+  else {bonus.style.display='none'}
+  totalBox.innerHTML=`
+    <div class="total-row"><span>Сумма услуг</span><b>${subtotal} ₽</b></div>
+    <div class="total-row"><span>Срочность ×${urgencyK}</span><b>${withUrgency} ₽</b></div>
+    <div class="total-row"><span>Скидка ${disc?disc*100:0}%</span><b style="color:#10B981">−${discount} ₽</b></div>
+    <div class="total-big"><span>К оплате</span><b>${total.toLocaleString('ru-RU')} ₽</b></div>
+    <div style="font-size:11px;color:#64748B;margin-top:6px">${total===1500&&withUrgency<1500?'Минимальный заказ 1500 ₽ • ':''}Фикс-цена на 24 часа • Без доплат</div>
+  `;
+  totalBox.dataset.total=total;
+  totalBox.dataset.disc=disc;
+}
+function quickAdd(titles){titles.forEach(t=>addToCart(t)); scrollToCalc();}
+function renderPrices(){
+  const elec=[
+    ['Сборка люстры',680],['Установка люстры на крюк',810],['Люстра с планкой',1750],['Бра / светильник',420],['Потолочный светильник',530],['Светодиодная лента',230],['Розетка накладная',420],['Розетка встраиваемая',260],['Выключатель',260],['Кабель-канал (м)',150],['Провод в штробе',110],
+  ];
+  const santeh=[
+    ['Смеситель',1800],['Шаровый кран',1300],['Ванна',2700],['Душевая кабина',8850],['Унитаз',3000],['Инсталляция',3000],['Раковина/мойка',2400],['Полотенцесушитель',2550],['Водонагреватель',12800],['Счётчик воды',1800],['Устранение засора',1500],
+  ];
+  const mebel=[
+    ['Навес картин/зеркал',750],['Навес полок',900],['Кронштейн TV',450],['Карниз',1050],['Жалюзи',1050],['Сифон',450],['Смеситель (мелкий)',1000],['Сборка шкафа',1500],['Сборка комода',1500],['Сборка кровати',1200],['Установка замка',1450],
+  ];
+  const other=[
+    ['Укладка плитки (м²)',1700],['Покраска стен (м²)',350],['Штукатурка (м²)',450],['Гипсокартон (м²)',600],['Плинтус (м)',220],['Поклейка обоев (м²)',320],['Ламинат (м²)',500],['Плотницкие (час)',950],['Сварочные (час)',1400],['Отделочные (м²)',800],
+  ];
+  const fill=(id,arr)=>document.getElementById(id).innerHTML=arr.map(([n,p])=>`<div class="price-row"><span>${n}</span><b>${p} ₽</b></div>`).join('');
+  fill('priceElec',elec); fill('priceSanteh',santeh); fill('priceMebel',mebel); fill('priceOther',other);
+}
+function scrollToCalc(){document.getElementById('calc').scrollIntoView({behavior:'smooth'}); setTimeout(()=>document.getElementById('search').focus(),600)}
+function openModal(){document.getElementById('modal').classList.add('open')}
+function closeModal(){document.getElementById('modal').classList.remove('open')}
+function openWa(){window.open('https://wa.me/74951234567?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82!%20%D0%9D%D1%83%D0%B6%D0%B5%D0%BD%20%D0%BC%D0%B0%D1%81%D1%82%D0%B5%D1%80%20%D0%BD%D0%B0%20%D1%87%D0%B0%D1%81','_blank')}
+function toggleFaq(el){const fq=el.parentElement; fq.classList.toggle('open'); el.querySelector('span').textContent=fq.classList.contains('open')?'−':'+'}
+function handleQuickForm(e){
+  e.preventDefault();
+  const fd=new FormData(e.target);
+  const total=document.getElementById('totalBox')?.dataset.total || '1500';
+  showSuccess(`Услуга: ${fd.get('service')||'Консультация'}<br>Имя: ${fd.get('name')}<br>Телефон: ${fd.get('phone')}`,`Сумма по расчёту: <b>${total} ₽</b>`);
+  e.target.reset();
+  closeModal();
+}
+function handleCalcOrder(e){
+  e.preventDefault();
+  if(cart.length===0){alert('Добавь хотя бы одну услугу в калькуляторе слева');return}
+  const fd=new FormData(e.target);
+  const total=document.getElementById('totalBox').dataset.total;
+  const disc=document.getElementById('totalBox').dataset.disc;
+  const urgency=document.querySelector('.urg.active b').innerText;
+  const items=cart.map(c=>`${c.title} ×${c.qty}`).join(', ');
+  showSuccess(`Состав: ${items}<br>Срочность: ${urgency}<br>Имя: ${fd.get('name')} • ${fd.get('phone')}<br>Адрес: ${fd.get('address')||'уточним'}`, `К оплате: <b>${Number(total).toLocaleString('ru-RU')} ₽</b> ${disc>0?`<span style="color:#10B981">• скидка ${disc*100}% уже учтена</span>`:''}<br><small style="color:#64748B">Фикс на 24 часа • Выезд 0₽</small>`);
+  e.target.reset();
+}
+function handleContact(e){
+  e.preventDefault();
+  const fd=new FormData(e.target);
+  showSuccess(`Имя: ${fd.get('name')}<br>Телефон: ${fd.get('phone')}<br>Задача: ${fd.get('msg')||'—'}`, `Менеджер перезвонит за 2 минуты`);
+  e.target.reset();
+}
+function showSuccess(detail, extra){
+  document.getElementById('successDetail').innerHTML=detail+ (extra?`<div style="margin-top:8px;padding-top:8px;border-top:1px solid var(--line)">${extra}</div>`:'');
+  document.getElementById('success').classList.add('open');
+}
+function closeSuccess(){document.getElementById('success').classList.remove('open')}
+function toggleNav(){alert('Меню — прокрути к нужному разделу: Услуги, Калькулятор, Отзывы, Контакты')}
+document.addEventListener('click',e=>{if(e.target.id==='modal')closeModal(); if(e.target.id==='success')closeSuccess()});
+init();
+</script>
+</body>
+</html>
