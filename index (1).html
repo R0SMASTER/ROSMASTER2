@@ -34,10 +34,10 @@
   --shadow-lg:0 4px 32px rgba(0,0,0,.08);
 }
 html{scroll-behavior:smooth}
-body{font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'VK Sans Display', 'Segoe UI', Roboto, Arial, sans-serif; color:#000; background:var(--vk-bg); line-height:1.5; overflow-x:hidden}
+body{font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'VK Sans Display', 'Segoe UI', Roboto, Arial, sans-serif; color:#000; background:var(--vk-bg); line-height:1.5; overflow-x:hidden; width:100%; max-width:100vw}
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
-.container{max-width:1240px;margin:0 auto;padding:0 20px}
+.container{max-width:1240px;margin:0 auto;padding:0 20px;box-sizing:border-box;width:100%}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 20px;border-radius:10px;font-weight:600;font-size:14px;cursor:pointer;border:none;transition:.15s;white-space:nowrap;font-family:inherit}
 .btn-primary{background:var(--vk-blue);color:#fff;box-shadow:none;border:1.5px solid var(--vk-blue)}
 .btn-primary:hover{transform:none;box-shadow:none;background:var(--vk-blue-dark);border-color:var(--vk-blue-dark);color:#fff}
@@ -127,7 +127,7 @@ img{max-width:100%;display:block}
 .calc-body{display:grid;grid-template-columns:1.45fr .95fr;gap:0}
 .calc-left{padding:20px;background:#fff}
 .calc-right{padding:20px;background:#F9FAFB;border-left:1px solid #E7E8EC}
-.tabs{display:flex;gap:8px;overflow:auto;padding-bottom:8px;scrollbar-width:none}
+.tabs{display:flex;gap:8px;overflow:auto;padding-bottom:8px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .tab{padding:7px 12px;border-radius:8px;border:1px solid #DCE1E6;background:#fff;color:#2C2D2E;font-weight:500;font-size:13px;white-space:nowrap;cursor:pointer}
 .tab.active{background:var(--vk-blue);color:#fff;border-color:var(--vk-blue)}
 .search{position:relative;margin:14px 0}
@@ -280,18 +280,21 @@ img{max-width:100%;display:block}
   .svc{padding:14px}
   .svc p{min-height:auto}
   .svc-top{width:42px;height:42px;font-size:20px}
-  .calc-wrap{border-radius:12px}
-  .calc-head{padding:14px 16px;flex-direction:column;align-items:flex-start}
-  .calc-head h2{font-size:18px}
-  .calc-left,.calc-right{padding:14px}
-  .tabs{gap:6px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:6px}
+  .calc-wrap{border-radius:12px;overflow:visible;border:1px solid #E7E8EC}
+  .calc-head{padding:14px 16px;flex-direction:column;align-items:flex-start;gap:10px}
+  .calc-head h2{font-size:18px;line-height:1.2}
+  .calc-left,.calc-right{padding:14px;width:100%;box-sizing:border-box}
+  .calc-body{display:block;width:100%}
+  .calc-left{border-bottom:1px solid #E7E8EC}
+  .calc-right{border-left:none;border-top:none}
+  .tabs{gap:6px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:6px;width:100%;box-sizing:border-box;scrollbar-width:none}
   .tab{font-size:12px;padding:6px 10px;flex:0 0 auto}
   .search input{font-size:16px}
-  .catalog{max-height:360px}
-  .cat-item{padding:10px 12px;flex-direction:column;align-items:flex-start;gap:8px}
-  .cat-item > div:last-child{width:100%;justify-content:space-between}
-  .cart-item{flex-direction:column;align-items:flex-start}
-  .cart-item > div:last-child{width:100%;justify-content:space-between}
+  .catalog{max-height:50vh;min-height:200px;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;padding-right:4px;width:100%;box-sizing:border-box}
+  .cat-item{padding:10px 12px;flex-direction:column;align-items:flex-start;gap:8px;width:100%;box-sizing:border-box;overflow:hidden}
+  .cat-item > div:last-child{width:100%;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  .cart-item{flex-direction:column;align-items:flex-start;width:100%;box-sizing:border-box}
+  .cart-item > div:last-child{width:100%;justify-content:space-between;flex-wrap:wrap}
   .total-big b{font-size:18px}
   .urgency{grid-template-columns:1fr;gap:6px}
   .urg{padding:12px}
@@ -308,6 +311,7 @@ img{max-width:100%;display:block}
   .map iframe{min-height:260px}
   .footer{padding:20px 0}
   .footer-grid{grid-template-columns:1fr;gap:20px}
+  .calc-info-grid{grid-template-columns:1fr!important;gap:8px!important}
   .mobile-bar{padding:8px 10px;gap:8px;background:rgba(255,255,255,.98);backdrop-filter:blur(10px);border-top:1px solid #E7E8EC}
   .mobile-bar .btn{padding:12px 10px;font-size:13px;border-radius:10px}
   .float-wa{width:52px;height:52px;right:12px;bottom:88px;font-size:22px}
@@ -488,7 +492,7 @@ img{max-width:100%;display:block}
   </div>
 </section>
 
-<section id="calc" class="section" style="background:var(--vk-bg);padding-top:28px">
+<section id="calc" class="section" style="background:var(--vk-bg);padding-top:28px;overflow:visible">
   <div class="container">
     <div class="calc-wrap reveal in">
       <div class="calc-head">
@@ -526,8 +530,8 @@ img{max-width:100%;display:block}
             </div>
             <label style="font-size:13px;font-weight:700">Материалы</label>
             <div style="display:flex;gap:8px;margin:8px 0 12px">
-              <label style="flex:1;display:flex;gap:8px;align-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);padding:10px;border-radius:10px;cursor:pointer"><input type="radio" name="mat" value="client" checked> <span style="font-size:13px"><b>Мои</b><br><small style="color:#94A3B8">дешевле</small></span></label>
-              <label style="flex:1;display:flex;gap:8px;align-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);padding:10px;border-radius:10px;cursor:pointer"><input type="radio" name="mat" value="master"> <span style="font-size:13px"><b>Мастера</b><br><small style="color:#94A3B8">+ чек</small></span></label>
+              <label style="flex:1;display:flex;gap:8px;align-items:center;background:#fff;border:1px solid #DCE1E6;padding:10px;border-radius:10px;cursor:pointer"><input type="radio" name="mat" value="client" checked> <span style="font-size:13px"><b>Мои</b><br><small style="color:#94A3B8">дешевле</small></span></label>
+              <label style="flex:1;display:flex;gap:8px;align-items:center;background:#fff;border:1px solid #DCE1E6;padding:10px;border-radius:10px;cursor:pointer"><input type="radio" name="mat" value="master"> <span style="font-size:13px"><b>Мастера</b><br><small style="color:#94A3B8">+ чек</small></span></label>
             </div>
             <div class="cart-total" id="totalBox"></div>
             <div class="bonus" id="bonusBox">🎁 Скидка 10% применилась! Зафиксируй цену сейчас — действует 24 часа.</div>
@@ -542,7 +546,7 @@ img{max-width:100%;display:block}
         </div>
       </div>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px" class="calc-info-grid">
       <div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;gap:10px;align-items:center"><span style="font-size:20px">💬</span><div><b style="font-size:13px">Отправим смету в WhatsApp/Telegram</b><br><small style="color:var(--gray)">за 2 минуты</small></div></div>
       <div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;gap:10px;align-items:center"><span style="font-size:20px">📄</span><div><b style="font-size:13px">Договор и акт</b><br><small style="color:var(--gray)">выдаём на руки</small></div></div>
       <div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;gap:10px;align-items:center"><span style="font-size:20px">💳</span><div><b style="font-size:13px">Оплата после проверки</b><br><small style="color:var(--gray)">наличные / перевод / СБП</small></div></div>
@@ -687,7 +691,7 @@ img{max-width:100%;display:block}
       <div class="contact-card" style="color:var(--dark)">
         <h3>Контакты</h3>
         <div class="c-row"><i>📞</i><div><b>+7 (495) 123-45-67</b><br><small style="color:var(--gray)">Ежедневно 08:00–22:00, срочно 24/7</small></div></div>
-        <div class="c-row"><i>✉️</i><div><b><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="92fbfcf4fdd2e0fde1fff3e1e6f7e0bce2e0fd">[email&#160;protected]</a></b><br><small style="color:var(--gray)">Ответим за 10 минут</small></div></div>
+        <div class="c-row"><i>✉️</i><div><b><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ef86818980af9d809c828e9c9b8a9dc19f9d80">[email&#160;protected]</a></b><br><small style="color:var(--gray)">Ответим за 10 минут</small></div></div>
         <div class="c-row"><i>📍</i><div><b>Москва и МО</b><br><small style="color:var(--gray)">Выезд 45 минут • Балашиха, Химки, Подольск, Мытищи, Люберцы, Королёв и др.</small></div></div>
         <div class="c-row"><i>💬</i><div><b>WhatsApp / Telegram</b><br><small style="color:var(--gray)">Фото-осмотр и смета за 2 минуты → <a href="#" onclick="openWa()" style="color:var(--vk-blue)">написать</a></small></div></div>
         <div style="margin-top:14px;background:var(--light);border:1px solid var(--line);border-radius:12px;padding:12px">
@@ -1031,5 +1035,5 @@ init();
   </div>
 </div>
 
-</body>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a2ca74115b55a6a3',t:'MTc4Njk4ODMxNg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
