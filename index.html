@@ -225,35 +225,115 @@ img{max-width:100%;display:block}
 .success-card{background:#fff;border-radius:20px;max-width:440px;width:100%;padding:28px;text-align:center}
 /* STICKY MOBILE BAR */
 .mobile-bar{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);padding:10px 14px;display:none;gap:10px;z-index:40;box-shadow:0 -8px 20px rgba(15,23,42,.08)}
-/* RESPONSIVE */
+/* RESPONSIVE - VK Mobile First */
 @media(max-width:1020px){
-  .hero-grid{grid-template-columns:1fr}
+  .container{padding:0 16px}
+  .hero-grid{grid-template-columns:1fr;gap:22px}
+  .hero-image{aspect-ratio:16/10}
   .services-grid{grid-template-columns:repeat(2,1fr)}
   .calc-body{grid-template-columns:1fr}
-  .calc-right{border-left:none;border-top:1px solid rgba(255,255,255,.06)}
+  .calc-right{border-left:none;border-top:1px solid #E7E8EC}
   .why{grid-template-columns:1fr 1fr}
   .steps{grid-template-columns:1fr 1fr}
   .step::after{display:none}
   .reviews{grid-template-columns:1fr 1fr}
   .prices{grid-template-columns:1fr}
   .contact{grid-template-columns:1fr}
-  .footer-grid{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:24px}
   .nav{display:none}
+  .header-actions .phone{display:none}
 }
 @media(max-width:640px){
-  .h1{font-size:34px}
-  .grid2{grid-template-columns:1fr}
-  .why{grid-template-columns:1fr}
-  .steps{grid-template-columns:1fr}
-  .reviews{grid-template-columns:1fr}
-  .services-grid{grid-template-columns:1fr}
-  .mobile-bar{display:flex}
+  .topbar{display:none}
+  .header-inner{padding:10px 0}
+  .logo-mark{width:38px;height:38px;font-size:16px;border-radius:9px}
+  .logo-text strong{font-size:16px}
+  .logo-text small{font-size:10px}
+  .header-actions{gap:8px}
   .header-actions .btn-ghost{display:none}
-  .burger{display:grid}
-  body{padding-bottom:72px}
-  .urgency{grid-template-columns:1fr}
+  .header-actions .btn-primary{padding:10px 14px;font-size:13px}
+  .burger{display:grid;width:40px;height:40px}
+  body{padding-bottom:84px}
+  .section{padding:32px 0}
+  .section-head h2{font-size:26px;line-height:1.1}
+  .section-head p{font-size:14px}
+  .h1{font-size:30px;line-height:1.02}
+  .hero{padding:16px 0 20px}
+  .hero-sub{font-size:15px;margin-bottom:16px}
+  .hero-cta{flex-direction:column}
+  .hero-cta .btn{width:100%;justify-content:center;padding:16px}
+  .checks{grid-template-columns:1fr;gap:8px;margin-top:14px}
+  .check{font-size:13px}
   .hero-trust{gap:8px}
+  .trust-pill{padding:7px 10px;font-size:12px}
+  .hero-card{border-radius:12px}
+  .hero-card-head{padding:12px 14px}
+  .hero-form{padding:14px}
+  .inp{padding:14px 12px;font-size:16px;border-radius:10px} /* 16px prevents iOS zoom */
+  .grid2{grid-template-columns:1fr;gap:8px}
+  .hero-image{aspect-ratio:4/3;border-radius:12px}
+  .hero-badge{left:10px;right:10px;bottom:10px;padding:8px 10px;border-radius:10px;gap:8px}
+  .hero-badge > div:first-child{width:36px;height:36px!important;font-size:16px}
+  .hero-badge b{font-size:16px}
+  .hero-badge small{font-size:10px}
+  .services-grid{grid-template-columns:1fr;gap:10px}
+  .svc{padding:14px}
+  .svc p{min-height:auto}
+  .svc-top{width:42px;height:42px;font-size:20px}
+  .calc-wrap{border-radius:12px}
+  .calc-head{padding:14px 16px;flex-direction:column;align-items:flex-start}
+  .calc-head h2{font-size:18px}
+  .calc-left,.calc-right{padding:14px}
+  .tabs{gap:6px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:6px}
+  .tab{font-size:12px;padding:6px 10px;flex:0 0 auto}
+  .search input{font-size:16px}
+  .catalog{max-height:360px}
+  .cat-item{padding:10px 12px;flex-direction:column;align-items:flex-start;gap:8px}
+  .cat-item > div:last-child{width:100%;justify-content:space-between}
+  .cart-item{flex-direction:column;align-items:flex-start}
+  .cart-item > div:last-child{width:100%;justify-content:space-between}
+  .total-big b{font-size:18px}
+  .urgency{grid-template-columns:1fr;gap:6px}
+  .urg{padding:12px}
+  .prices{gap:10px}
+  .why{grid-template-columns:1fr;gap:10px}
+  .why-card{padding:14px}
+  .steps{grid-template-columns:1fr;gap:10px}
+  .reviews{grid-template-columns:1fr;gap:10px}
+  .rev{padding:14px}
+  .contact{gap:12px}
+  .contact-card{padding:14px}
+  .c-row{font-size:13px}
+  .map{min-height:260px}
+  .map iframe{min-height:260px}
+  .footer{padding:20px 0}
+  .footer-grid{grid-template-columns:1fr;gap:20px}
+  .mobile-bar{padding:8px 10px;gap:8px;background:rgba(255,255,255,.98);backdrop-filter:blur(10px);border-top:1px solid #E7E8EC}
+  .mobile-bar .btn{padding:12px 10px;font-size:13px;border-radius:10px}
+  .float-wa{width:52px;height:52px;right:12px;bottom:88px;font-size:22px}
+  .modal-card{margin:10px;border-radius:16px;max-height:88vh}
+  .modal-head{padding:14px 16px}
+  .modal-body{padding:16px}
+  .success-card{padding:20px}
 }
+@media(max-width:380px){
+  .h1{font-size:26px}
+  .services-grid{grid-template-columns:1fr}
+  .hero-cta .btn{font-size:14px;padding:14px}
+  .trust-pill b{font-size:13px}
+}
+
+/* Mobile nav drawer */
+.mobile-nav{position:fixed;inset:0;z-index:99;display:none}
+.mobile-nav.open{display:block}
+.mobile-nav__backdrop{position:absolute;inset:0;background:rgba(0,0,0,.45);backdrop-filter:blur(2px)}
+.mobile-nav__panel{position:absolute;top:0;right:0;width:84%;max-width:320px;height:100%;background:#fff;box-shadow:-8px 0 32px rgba(0,0,0,.12);padding:16px;display:flex;flex-direction:column;gap:14px;overflow:auto}
+.mobile-nav__head{display:flex;justify-content:space-between;align-items:center;padding-bottom:12px;border-bottom:1px solid #E7E8EC}
+.mobile-nav__links{display:grid;gap:4px}
+.mobile-nav__links a{padding:12px 12px;border-radius:10px;font-weight:600;font-size:15px;color:#19191A}
+.mobile-nav__links a:hover{background:#F0F2F5;color:var(--vk-blue)}
+.mobile-nav__cta{display:grid;gap:8px;margin-top:auto;padding-top:12px;border-top:1px solid #E7E8EC}
+
 .pulse{animation:pulse 1.8s infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(0,119,255,.35)}70%{box-shadow:0 0 0 10px rgba(0,119,255,0)}100%{box-shadow:0 0 0 0 rgba(0,119,255,0)}}
 .float-wa{position:fixed;right:16px;bottom:92px;width:56px;height:56px;background:#25D366;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:26px;box-shadow:0 10px 20px rgba(0,0,0,.18);z-index:45;text-decoration:none}
@@ -607,7 +687,7 @@ img{max-width:100%;display:block}
       <div class="contact-card" style="color:var(--dark)">
         <h3>Контакты</h3>
         <div class="c-row"><i>📞</i><div><b>+7 (495) 123-45-67</b><br><small style="color:var(--gray)">Ежедневно 08:00–22:00, срочно 24/7</small></div></div>
-        <div class="c-row"><i>✉️</i><div><b><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1b72757d745b697468767a686f7e69356b6974">[email&#160;protected]</a></b><br><small style="color:var(--gray)">Ответим за 10 минут</small></div></div>
+        <div class="c-row"><i>✉️</i><div><b><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="92fbfcf4fdd2e0fde1fff3e1e6f7e0bce2e0fd">[email&#160;protected]</a></b><br><small style="color:var(--gray)">Ответим за 10 минут</small></div></div>
         <div class="c-row"><i>📍</i><div><b>Москва и МО</b><br><small style="color:var(--gray)">Выезд 45 минут • Балашиха, Химки, Подольск, Мытищи, Люберцы, Королёв и др.</small></div></div>
         <div class="c-row"><i>💬</i><div><b>WhatsApp / Telegram</b><br><small style="color:var(--gray)">Фото-осмотр и смета за 2 минуты → <a href="#" onclick="openWa()" style="color:var(--vk-blue)">написать</a></small></div></div>
         <div style="margin-top:14px;background:var(--light);border:1px solid var(--line);border-radius:12px;padding:12px">
@@ -915,9 +995,41 @@ function showSuccess(detail, extra){
   document.getElementById('success').classList.add('open');
 }
 function closeSuccess(){document.getElementById('success').classList.remove('open')}
-function toggleNav(){alert('Меню — прокрути к нужному разделу: Услуги, Калькулятор, Отзывы, Контакты')}
+function toggleNav(){
+  const nav=document.getElementById('mobileNav');
+  if(!nav) return;
+  const isOpen=nav.classList.contains('open');
+  nav.classList.toggle('open',!isOpen);
+  nav.setAttribute('aria-hidden', isOpen ? 'true' : 'false');
+  document.body.style.overflow = isOpen ? '' : 'hidden';
+}
 document.addEventListener('click',e=>{if(e.target.id==='modal')closeModal(); if(e.target.id==='success')closeSuccess()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeModal();closeSuccess();const nav=document.getElementById('mobileNav');if(nav&&nav.classList.contains('open'))toggleNav();}});
 init();
 </script>
+
+<!-- Mobile NAV Drawer VK style -->
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="mobile-nav__backdrop" onclick="toggleNav()"></div>
+  <div class="mobile-nav__panel">
+    <div class="mobile-nav__head">
+      <div style="display:flex;gap:10px;align-items:center"><div class="logo-mark" style="width:36px;height:36px;font-size:15px">М<span style="color:#fff">•</span>Ч</div><b>ROSMASTER</b></div>
+      <button onclick="toggleNav()" style="width:36px;height:36px;border-radius:8px;border:1px solid #E7E8EC;background:#fff;display:grid;place-items:center">✕</button>
+    </div>
+    <nav class="mobile-nav__links">
+      <a href="#services" onclick="toggleNav()">🔧 Услуги и цены</a>
+      <a href="#calc" onclick="toggleNav()">🧮 Калькулятор</a>
+      <a href="#why" onclick="toggleNav()">⭐ Почему мы</a>
+      <a href="#reviews" onclick="toggleNav()">💬 Отзывы</a>
+      <a href="#contacts" onclick="toggleNav()">📍 Контакты</a>
+    </nav>
+    <div class="mobile-nav__cta">
+      <a href="tel:+74951234567" class="btn btn-dark" style="width:100%">📞 +7 (495) 123-45-67</a>
+      <button class="btn btn-primary" style="width:100%" onclick="toggleNav();scrollToCalc()">🧮 Рассчитать стоимость</button>
+      <div style="text-align:center;color:#818C99;font-size:12px">Работаем ежедневно 08:00–22:00 • Выезд 45 мин</div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
