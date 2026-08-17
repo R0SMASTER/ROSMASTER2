@@ -15,7 +15,7 @@ git init
 git add .
 git commit -m "feat: ROSMASTER VK style"
 git branch -M main
-git remote add origin https://github.com/USERNAME/ROSMASTER2.git
+git remote add origin https://github.com/R0SMASTER/ROSMASTER2.git
 git push -u origin main
 ```
 > Замени `USERNAME` на свой логин GitHub!
@@ -26,10 +26,10 @@ git push -u origin main
 2. В блоке **Build and deployment**:
    - Source: `Deploy from a branch`
    - Branch: `main` → `/ (root)` → **Save**
-3. Через 1-2 минуты появится ссылка: `https://USERNAME.github.io/ROSMASTER2/`
+3. Через 1-2 минуты появится ссылка: `https://R0SMASTER.github.io/ROSMASTER2/`
 
-### 4. Подключи свой домен rosmaster.ru
-#### Если хочешь `rosmaster.ru` (без www):
+### 4. Подключи свой домен rosmaster.pro
+#### Если хочешь `rosmaster.pro` (без www):
 У регистратора домена (REG.RU, Beget, Timeweb, Nic.ru) добавь 4 A-записи:
 
 ```
@@ -37,24 +37,24 @@ git push -u origin main
 @   A   185.199.109.153
 @   A   185.199.110.153
 @   A   185.199.111.153
-www CNAME USERNAME.github.io.
+www CNAME R0SMASTER.github.io.
 ```
 
-#### Если хочешь `www.rosmaster.ru`:
+#### Если хочешь `www.rosmaster.pro`:
 ```
-www CNAME USERNAME.github.io.
+www CNAME R0SMASTER.github.io.
 ```
 
 #### В GitHub:
 1. Снова **Settings → Pages**
-2. В поле **Custom domain** впиши: `rosmaster.ru` → **Save**
+2. В поле **Custom domain** впиши: `rosmaster.pro` → **Save**
 3. Поставь галочку **Enforce HTTPS** (появится через 5-30 минут после проверки DNS)
 
 > Файл `CNAME` уже в репозитории, GitHub подхватит домен автоматически.
 
 ### 5. Проверка
 - Подожди 5-30 минут (DNS)
-- Открой https://rosmaster.ru — должен открыться сайт
+- Открой https://rosmaster.pro — должен открыться сайт
 - Проверь HTTPS (замок в браузере)
 
 ---
@@ -80,7 +80,7 @@ www CNAME USERNAME.github.io.
 
 **HTTPS не включается?**
 - Подожди до 1 часа, GitHub выпускает LetsEncrypt сертификат
-- Убедись что DNS уже прорезолвился: `dig rosmaster.ru +short` должен показать 185.199...
+- Убедись что DNS уже прорезолвился: `dig rosmaster.pro +short` должен показать 185.199...
 
 **Нужно поменять домен?**
 - Отредактируй файл `CNAME` (одна строка — твой домен)
